@@ -1,18 +1,18 @@
-[¼Ò°³]
-8ÀÚ¸® ÀÌÇÏ ´ÜÃàURL ¼­ºñ½º
-url ¾ÏÈ£È­ (sha256) 3ÀÚ¸®+ DB ½ÃÄö½º base62º¯È¯¸¦ ÀÌ¿ëÇÏ¿© urlÀ» º¯È¯
-DBÅ×ÀÌºí ³»¿¡¼­ º¯È¯µÈ ÁÖ¼Ò¿Í Áßº¹Ã¼Å© ÇÔ
-±âÁ¸ º¯È¯µÈ ÁÖ¼Ò°¡ ÀÖÀ»½Ã¿¡´Â redirect ÇÔ
+[ì†Œê°œ]
+8ìžë¦¬ ì´í•˜ ë‹¨ì¶•URL ì„œë¹„ìŠ¤
+url ì•”í˜¸í™” (sha256) 3ìžë¦¬+ DB ì‹œí€€ìŠ¤ base62ë³€í™˜ë¥¼ ì´ìš©í•˜ì—¬ urlì„ ë³€í™˜
+DBí…Œì´ë¸” ë‚´ì—ì„œ ë³€í™˜ëœ ì£¼ì†Œì™€ ì¤‘ë³µì²´í¬ í•¨
+ê¸°ì¡´ ë³€í™˜ëœ ì£¼ì†Œê°€ ìžˆì„ì‹œì—ëŠ” redirect í•¨
 
-[°³¹ßÈ¯°æ]
+[ê°œë°œí™˜ê²½]
 java 1.8
 tomcat 7.0
 oracle 11g
 
-[½ÇÇà¹æ¹ý]
+[ì‹¤í–‰ë°©ë²•]
 
-* db Å×ÀÌºí »ý¼º 
-
+* db í…Œì´ë¸” ìƒì„± 
+<pre><code>
 DROP TABLE HS_URL_001 CASCADE CONSTRAINTS;
 
 CREATE TABLE HS_URL_001
@@ -23,15 +23,15 @@ CREATE TABLE HS_URL_001
   INS_YMDHMS   TIMESTAMP(6) WITH TIME ZONE
 );
 
-COMMENT ON TABLE HS_URL_001 IS '(HS_URL_001) URL¸ñ·Ï';
+COMMENT ON TABLE HS_URL_001 IS '(HS_URL_001) URLëª©ë¡';
 
-COMMENT ON COLUMN HS_URL_001.ORGN_URL IS '½ÇÁ¦URL';
+COMMENT ON COLUMN HS_URL_001.ORGN_URL IS 'ì‹¤ì œURL';
 
-COMMENT ON COLUMN HS_URL_001.SEQ_NO IS 'ÀÏ·Ã¹øÈ£';
+COMMENT ON COLUMN HS_URL_001.SEQ_NO IS 'ì¼ë ¨ë²ˆí˜¸';
 
-COMMENT ON COLUMN HS_URL_001.SHORTEN_URL IS '´ÜÃàURL';
+COMMENT ON COLUMN HS_URL_001.SHORTEN_URL IS 'ë‹¨ì¶•URL';
 
-COMMENT ON COLUMN HS_URL_001.INS_YMDHMS IS 'ÀÔ·ÂÀÏ½Ã';
+COMMENT ON COLUMN HS_URL_001.INS_YMDHMS IS 'ìž…ë ¥ì¼ì‹œ';
 
 CREATE UNIQUE INDEX HS_URL_001_PK ON HS_URL_001
 (ORGN_URL, SEQ_NO);
@@ -42,8 +42,8 @@ ALTER TABLE HS_URL_001 ADD (
   (ORGN_URL)
   USING INDEX HS_URL001_PK
   ENABLE VALIDATE);
-
-* ½ÃÄö½º »ý¼º
+</code></pre>
+* ì‹œí€€ìŠ¤ ìƒì„±
 CREATE SEQUENCE SEQ_URL
   START WITH 79
   MAXVALUE 9999999999999999999999999999
@@ -52,10 +52,10 @@ CREATE SEQUENCE SEQ_URL
   NOCACHE
   NOORDER;
 
-* DBUtil.java ÀÇ Á¢¼ÓÁ¤º¸ ¼öÁ¤ (dbId, dbPw, dbUrl)
+* DBUtil.java ì˜ ì ‘ì†ì •ë³´ ìˆ˜ì • (dbId, dbPw, dbUrl)
 
-* ÇØ´ç ÇÁ·ÎÁ§Æ®¸¦ tomcat¿¡ deploy ÈÄ localhost:Æ÷Æ® Á¢¼Ó
+* í•´ë‹¹ í”„ë¡œì íŠ¸ë¥¼ tomcatì— deploy í›„ localhost:í¬íŠ¸ ì ‘ì†
 
-* È­¸é»ó¿¡¼­ ½ÇÁ¦ url ÀÔ·Â ÈÄ º¯È¯
+* í™”ë©´ìƒì—ì„œ ì‹¤ì œ url ìž…ë ¥ í›„ ë³€í™˜
 
-* º¯È¯µÈ ÁÖ¼Ò·Î Á¢¼Ó
+* ë³€í™˜ëœ ì£¼ì†Œë¡œ ì ‘ì†
