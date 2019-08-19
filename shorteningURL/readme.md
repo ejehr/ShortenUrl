@@ -65,8 +65,12 @@ CREATE SEQUENCE SEQ_URL
 </code></pre>
 * DBUtil.java 의 접속정보 수정 (dbId, dbPw, dbUrl)
 
-* 해당 프로젝트를 tomcat에 deploy 후 localhost:포트 접속
+* 해당 프로젝트를 tomcat에 deploy 
 
-* 화면상에서 실제 url 입력 후 변환
+<pre><code>
+<Context docBase="파일경로/shorteningURL" path="" reloadable="true" /></Host>
+</code></pre>
+
+* localhost:8080 접속 후 화면상에서 실제 url 입력 후 변환
 
 * 변환된 주소로 접속
