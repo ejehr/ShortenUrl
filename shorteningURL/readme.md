@@ -5,10 +5,11 @@ DB테이블 내에서 변환된 주소와 중복체크 함
 기존 변환된 주소가 있을시에는 redirect 함
 
 [개발환경]
-*java 1.8
-*tomcat 7.0
-*oracle 11g
-*eclipse
+
+* java 1.8
+* tomcat 7.0
+* oracle 11g
+* eclipse
 
 [실행방법]
 
