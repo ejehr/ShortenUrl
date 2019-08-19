@@ -44,6 +44,7 @@ ALTER TABLE HS_URL_001 ADD (
   ENABLE VALIDATE);
 </code></pre>
 * 시퀀스 생성
+<pre><code>
 CREATE SEQUENCE SEQ_URL
   START WITH 79
   MAXVALUE 9999999999999999999999999999
@@ -51,7 +52,7 @@ CREATE SEQUENCE SEQ_URL
   NOCYCLE
   NOCACHE
   NOORDER;
-
+</code></pre>
 * DBUtil.java 의 접속정보 수정 (dbId, dbPw, dbUrl)
 
 * 해당 프로젝트를 tomcat에 deploy 후 localhost:포트 접속
