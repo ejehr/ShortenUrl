@@ -14,7 +14,7 @@ DB테이블 내에서 변환된 주소와 중복체크 함
 
 ## [설명]
 
-* JSP로 간략히 입력폼 생성
+* JSP로 간단한 입력폼 생성
 * Shortening Key 8 Character 이내로 JAVA에서 SHA256 3자리 + sequence 숫자 base62 변환으로 주소처리
 * 기존에 저장된 URL 은 DB 조회 후 표시 (중복 X)
 * Shortening URL 호출 시 원래 URL로 redirect 처리
