@@ -1,18 +1,25 @@
-# [소개]
+## [소개]
 
 8자리 이하 단축URL 서비스
 url 암호화 (sha256) 3자리+ DB 시퀀스 base62변환를 이용하여 url을 변환
 DB테이블 내에서 변환된 주소와 중복체크 함
 기존 변환된 주소가 있을시에는 redirect 함
 
-[개발환경]
+## [개발환경]
 
 * java 1.8
 * tomcat 7.0
 * oracle 11g
 * eclipse
 
-[실행방법]
+## [설명]
+
+* JSP로 간략히 입력폼 생성
+* Shortening Key 8 Character 이내로 JAVA에서 SHA256 3자리 + sequence 숫자 base62 변환으로 주소처리
+* 기존에 저장된 URL 은 DB 조회 후 표시 (중복 X)
+* Shortening URL 호출 시 원래 URL로 redirect 처리
+
+## [실행방법]
 
 * db 테이블 생성 
 <pre><code>
