@@ -67,11 +67,9 @@ CREATE SEQUENCE SEQ_URL
 
 * 해당 프로젝트를 tomcat에 deploy 
 
-<pre><code>
-
+```
 <Context docBase="파일경로/shorteningURL" path="" reloadable="true" /></Host>
-
-</code></pre>
+```
 
 * localhost:8080 접속 후 화면상에서 실제 url 입력 후 변환
 
